@@ -73,3 +73,19 @@ Consider linting and testing before build is allowed to happen, my personal opin
 ### TODO
 - [ ] Setup tests
 - [ ] Server build
+
+### API
+
+- `GET /api/items` Get all items
+- `GET /api/items/:id` Get an item by id
+- `GET /api/items/category/:category` Get an item by its category
+- `POST /api/items` Send wardrobe data to server
+
+### TASKS
+- Create a new route / page
+- Create a carousel/slider/gallery component (styling not mandatory)
+- Populate each slide with a title and list of items fetched from the server (using route /api/items)
+- Do the same step but use the /api/items/:id or /api/items/category/:category route so you would get items one at a time from the server
+- When an item in the list is clicked, it is added to a wardrobe object and we move to the next slide.
+- On the last slide, send the wardrobe data object to the server
+- Display the response message at the end (after sending the wardrobe data)

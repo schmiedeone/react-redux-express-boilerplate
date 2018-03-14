@@ -35,7 +35,7 @@ let items = [
     id: 2,
     category: 'head',
     title: 'What about your head?',
-    options: ['Cowboy Hat', 'Cap', 'Beanie', 'Horns', 'Tool cool for a hat'],
+    options: ['Cowboy Hat', 'Cap', 'Beanie', 'Devil\'s Horns', 'Too cool for a hat'],
   },
   {
     id: 3,

@@ -21,20 +21,28 @@ app.get('/api/hello', (req, res) => {
 let items = [
   {
     id: 0,
-    text: 'Hello',
+    category: 'top',
+    title: 'Pick your top',
+    options: ['T-Shirt', 'Shirt', 'Hoodie', 'Sweater', 'Jacket'],
   },
   {
     id: 1,
-    text: 'This is Schmiede',
+    category: 'bottom',
+    title: 'Cover \'em legs',
+    options: ['Jeans', 'Shorts', 'Cargos', 'Slacks', 'Leather Pants'],
   },
   {
     id: 2,
-    text: 'We are in Düsseldorf',
+    category: 'head',
+    title: 'What about your head?',
+    options: ['Cowboy Hat', 'Cap', 'Beanie', 'Horns', 'Tool cool for a hat'],
   },
   {
     id: 3,
-    text: 'Thats in Germany!',
-  },
+    category: 'feet',
+    title: 'For your lovely feet?',
+    options: ['Sneakers', 'Boots', 'Flip-flops', 'Sport Shoes', 'Bare foot is my game'],
+  }  
 ];
 
 let idCounter = 4;
@@ -48,17 +56,19 @@ app.get('/api/items/:id', (req, res) => {
   res.send({ item: items.filter(item => item.id == id)[0] });
 });
 
-app.post('/api/item', (req, res) => {
-  const message = req.body.message;
-  items.push({ id: idCounter++, text: message });
-  res.send({ items });
+app.get('/api/items/category/:category', (req, res) => {
+  const category = req.params.category;
+  res.send({ item: items.filter(item => item.category == category)[0] });
 });
 
-app.delete('/api/items/:id', (req, res) => {
-  const id = req.params.id;
-  res.send({ items: items.filter(item => item.id != id) });
+app.post('/api/items', (req, res) => {
+  const clothes = req.body;
+  if(clothes && clothes.top && clothes.bottom && clothes.head && clothes.feet) {
+    res.send({ message: 'Well done!' });
+  } else {
+    res.send(422);
+  }
 });
-
 
 if (isDeveloping) {
   console.log('Server started in development mode.');

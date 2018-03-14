@@ -14,6 +14,52 @@ const app = express();
 app.use(bodyParser.json());
 app.use('/static', express.static(path.join(__dirname, '../static')));
 
+app.get('/api/hello', (req, res) => {
+  res.send({ express: 'YO From Express' });
+});
+
+let items = [
+  {
+    id: 0,
+    text: 'Hello',
+  },
+  {
+    id: 1,
+    text: 'This is Schmiede',
+  },
+  {
+    id: 2,
+    text: 'We are in Düsseldorf',
+  },
+  {
+    id: 3,
+    text: 'Thats in Germany!',
+  },
+];
+
+let idCounter = 4;
+
+app.get('/api/items', (req, res) => {
+  res.send({ items });
+});
+
+app.get('/api/items/:id', (req, res) => {
+  const id = req.params.id;
+  res.send({ item: items.filter(item => item.id == id)[0] });
+});
+
+app.post('/api/item', (req, res) => {
+  const message = req.body.message;
+  items.push({ id: idCounter++, text: message });
+  res.send({ items });
+});
+
+app.delete('/api/items/:id', (req, res) => {
+  const id = req.params.id;
+  res.send({ items: items.filter(item => item.id != id) });
+});
+
+
 if (isDeveloping) {
   console.log('Server started in development mode.');
   const compiler = webpack(config);

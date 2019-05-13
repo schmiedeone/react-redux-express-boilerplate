@@ -82,8 +82,8 @@ Consider linting and testing before build is allowed to happen, my personal opin
 - `POST /api/items` Send wardrobe data to server
 
 ### TASKS
-- Create a new route / page
-- Create a carousel/slider/gallery component (styling not mandatory)
+- ~~Create a new route / page~~
+- Use the MyCard component to create a carousel/gallery/slider (styling not mandatory) [Documentation about MUI Card](https://v0.material-ui.com/#/components/card)
 - Populate each slide with a title and list of items fetched from the server (using route /api/items)
 - Do the same step but use the /api/items/:id or /api/items/category/:category route so you would get items one at a time from the server
 - When an item in the list is clicked, it is added to a wardrobe object and we move to the next slide.

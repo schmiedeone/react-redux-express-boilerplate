@@ -93,4 +93,4 @@ Consider linting and testing before build is allowed to happen, my personal opin
 
 ### HINTS
 - Main page/Card page is available here: http://localhost:3000/#/mypage
-- To remove admin panel from the right sidebar press ctrl + b. 
+- To hide Redux Dev tools from the right sidebar press ctrl + b. 

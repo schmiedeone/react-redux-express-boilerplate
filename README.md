@@ -83,9 +83,9 @@ Consider linting and testing before build is allowed to happen, my personal opin
 
 ### TASKS
 - ~~Create a new route / page~~
-- Use the MyCard component to create a carousel/gallery/slider [Documentation about MUI Card](https://v0.material-ui.com/#/components/card). You can use whatever you feel is good for this task. It might be simple snippet created by yourself or you ca use a solution that already exists. 
+- Use the MyCard component to create a carousel/gallery/slider [Documentation about MUI Card](https://v0.material-ui.com/#/components/card). You can use whatever you feel is good for this task. It might be simple snippet created by yourself or you ca use a solution that already exists.
+- Style your carousel a bit to make it look cleaner and more appealing. You can use placeholder images or icons, if you want to, but it is not mandatory. You can also remove some parts of the code if you think they are not necessary.
 - Populate each slide with a title and list of items fetched from the server (using route /api/items).
-- Style your carousel a bit to make it look cleaner and more appealing. You can use placeholder images or icons, if you want to, but it is not mandatory. You can also remove some parts of the code if you think they are not unnecessary.
 - Do the same step but use the /api/items/:id or /api/items/category/:category route so you would get items one at a time from the server
 - When an item in the list is clicked, it is added to a wardrobe object and we move to the next slide.
 - On the last slide, send the wardrobe data object to the server

@@ -5,11 +5,18 @@ import styles from "./Carousel.css";
 import { fetchHelloRequest } from "../actions/data";
 import MyCard from "./MyCard";
 
+
+/*better to inject data into the child than to store the data there */
+
+
 class Carousel extends Component {
   constructor(props) {
     super(props);
+  this.state = {
+    img: null,
+  };
   }
-
+ 
   componentDidMount() {
     this.props.getHello();
   }

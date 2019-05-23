@@ -27,7 +27,7 @@ class Carousel extends Component {
         <div className={styles.container}>
           <h2>Carousel</h2>
           <a className={styles.logo} />
-          <h1>{this.props.message}</h1>
+          
           <MyCard />
         </div>
       </div>

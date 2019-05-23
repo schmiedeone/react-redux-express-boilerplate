@@ -3,11 +3,9 @@
   padding: 40px;
   width: 80%;
   color: #333;
-  background: white;
-  border: 2px solid black;
-  border-radius: 10px;
-  box-shadow: 10px 5px 5px grey;
+  background: #419be0;
 }
+
 h3 {
   background: blue;
   color: #fff;

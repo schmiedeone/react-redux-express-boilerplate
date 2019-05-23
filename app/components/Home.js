@@ -3,6 +3,7 @@ import { Link } from 'react-router';
 import { connect } from 'react-redux';
 import styles from './Home.css';
 import { fetchHelloRequest } from '../actions/data';
+import Carousel from './Carousel'
 
 class Home extends Component {
 
@@ -18,9 +19,7 @@ class Home extends Component {
     return (
       <div>
         <div className={styles.container}>
-          <h2>Home</h2>
-          <a className={styles.logo} />
-          <h1>{this.props.message}</h1>
+          <Carousel/>
         </div>
       </div>
     );

@@ -35,9 +35,14 @@ render() {
     <CardHeader
       title="Awesome Carousel"
       subtitle="got stuff displayed!"
+      actAsExpander={true}
+      showExpandableButton={true}
     />
-    
-    <CardText >
+    <CardActions>
+      <FlatButton label="Previous" onClick={() => this.decreaseCard()} />
+      <FlatButton label="Next" onClick={() => this.incrementCard()} />
+    </CardActions>
+    <CardText expandable={true}>
       <ul>
           <div>
             <img className="carouselImg" src={data[this.state.card].picture}/>
@@ -45,10 +50,6 @@ render() {
           </div>
       </ul>
     </CardText>
-    <CardActions>
-      <FlatButton label="Previous" onClick={() => this.decreaseCard()} />
-      <FlatButton label="Next" onClick={() => this.incrementCard()} />
-    </CardActions>
   </Card>
 )
         }
